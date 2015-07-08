@@ -12,6 +12,7 @@ describe TadpolesController, :type => :request  do
       found_by_color = Frog.find_by(:color => @tadpole.color)
       expect(found_by_color.name).to eq(@tadpole.name)
       expect(found_by_name.color).to eq(@tadpole.color)
+      binding.pry
       expect(found_by_name.pond).to eq(@tadpole.pond)
       expect(found_by_name).to eq(found_by_color)
     end
